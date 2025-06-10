@@ -3,14 +3,13 @@ import { motion } from "framer-motion";
 export default function Hero() {
   return (
     <section id="inicio" className="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white pt-20 px-4">
-    <motion.img
-  src="/perfil.jpg" 
-  alt="Foto de perfil"
-  className="w-32 h-32 rounded-full shadow-lg mb-4 border-4 border-white"
-  initial={{ opacity: 0, scale: 0.8 }}
-  animate={{ opacity: 1, scale: 1 }}
-  transition={{ duration: 0.8 }}
+   
+<motion.img
+  src="/perfil.jpg" // o "/perfil.png" si tu archivo termina en .png
+  alt="Perfil de Andrés"
+  className="rounded-full border-4 border-white w-40 h-40 object-cover"
 />
+
 
       <motion.h2
         className="text-4xl font-bold mb-2 text-center"
