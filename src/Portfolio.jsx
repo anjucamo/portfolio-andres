@@ -50,13 +50,13 @@ export default function Portfolio() {
       <section id="inicio" className="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white pt-20 px-4">
         <motion.img
   src="/perfil.jpg"
+  alt="Foto de perfil"
+  className="w-32 h-32 rounded-full shadow-lg mb-4 border-4 border-white"
+  initial={{ opacity: 0, scale: 0.8 }}
+  animate={{ opacity: 1, scale: 1 }}
+  transition={{ duration: 0.8 }}
+/>
 
-          alt="Foto de perfil"
-          className="w-32 h-32 rounded-full shadow-lg mb-4 border-4 border-white"
-          initial={{ opacity: 0, scale: 0.8 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 0.8 }}
-        />
         <motion.h2 className="text-4xl font-bold mb-2" initial={{ y: 30, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={{ delay: 0.3 }}>
           ¡Hola! Soy Andrés Cardozo
         </motion.h2>
