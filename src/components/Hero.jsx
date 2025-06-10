@@ -4,7 +4,7 @@ export default function Hero() {
   return (
     <section id="inicio" className="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white pt-20 px-4">
     <motion.img
-  src="/perfil.jpg" // o /perfil.png si ese es el nombre
+  src="/perfil.jpg" 
   alt="Foto de perfil"
   className="w-32 h-32 rounded-full shadow-lg mb-4 border-4 border-white"
   initial={{ opacity: 0, scale: 0.8 }}
