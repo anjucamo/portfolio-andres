@@ -5,7 +5,7 @@ export default function Hero() {
     <section id="inicio" className="h-screen flex flex-col items-center justify-center bg-gradient-to-r from-blue-600 to-indigo-600 text-white pt-20 px-4">
    
 <motion.img
-  src="/perfil.jpg" // o "/perfil.png" si tu archivo termina en .png
+  src="perfil.jpg" // o "/perfil.png" si tu archivo termina en .png
   alt="Perfil de Andrés"
   className="rounded-full border-4 border-white w-40 h-40 object-cover"
 />
