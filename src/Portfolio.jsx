@@ -51,7 +51,7 @@ export default function Portfolio() {
       {/* Hero */}
       <section id="inicio" className="min-h-screen flex flex-col items-center justify-center text-center bg-gradient-to-tr from-blue-600 to-indigo-700 px-4 pt-20">
         <motion.img
-          src="/perfil.png"
+          src="/perfil.jpj"
           alt="Andrés perfil"
           className="w-36 h-36 rounded-full border-4 border-white shadow-lg mb-4"
           initial={{ opacity: 0, scale: 0.8 }}
@@ -64,11 +64,13 @@ export default function Portfolio() {
           transition={{ delay: 0.2 }}
         >¡Hola! Soy Andrés Cardozo</motion.h2>
         <motion.p className="text-lg md:text-xl mb-4"
+         src="/perfil.jpj"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.4 }}
         >Desarrollador | Tecnólogo en sistemas y redes</motion.p>
         <motion.div className="flex gap-4"
+         src="/perfil.jpj"
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ delay: 0.6 }}
