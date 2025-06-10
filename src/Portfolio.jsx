@@ -65,9 +65,8 @@ export default function Portfolio() {
         </motion.p>
         <motion.div className="mt-6 flex gap-4" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ delay: 0.7 }}>
           <a href="#contacto" className="bg-white text-blue-600 px-6 py-2 rounded hover:bg-blue-100 transition">Contáctame</a>
-          <a href="/cv.pdf" download className="border border-white px-6 py-2 rounded hover:bg-white hover:text-blue-600 transition">
-  Descargar CV
-</a>
+          <a href="/cv.pdf" download className="...">Descargar CV</a>
+
 
         </motion.div>
       </section>
