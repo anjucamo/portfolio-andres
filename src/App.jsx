@@ -1,35 +1,45 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import { useEffect, useState } from "react";
+import { motion } from "framer-motion";
+import Hero from "./components/Hero";
+import Navbar from "./components/Navbar";
+import SobreMi from "./components/SobreMi";
+import Proyectos from "./components/Proyectos";
+import Contacto from "./components/Contacto";
+import Footer from "./components/Footer";
+import WhatsAppButton from "./components/WhatsAppButton";
 
-function App() {
-  const [count, setCount] = useState(0)
+export default function App() {
+  const [modoOscuro, setModoOscuro] = useState(false);
+
+  useEffect(() => {
+    const root = document.documentElement;
+    if (modoOscuro) {
+      root.classList.add("dark");
+    } else {
+      root.classList.remove("dark");
+    }
+  }, [modoOscuro]);
 
   return (
-    <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
+    <div className="font-sans bg-gray-100 text-gray-900 dark:bg-gray-900 dark:text-white scroll-smooth">
+      {/* Botón modo oscuro */}
+      <div className="fixed top-4 right-4 z-50">
+        <button
+          onClick={() => setModoOscuro(!modoOscuro)}
+          className="bg-gray-200 dark:bg-gray-800 text-gray-800 dark:text-white px-3 py-1 rounded shadow hover:scale-105 transition"
+        >
+          {modoOscuro ? "☀️ Claro" : "🌙 Oscuro"}
         </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
       </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </>
-  )
+
+      <Navbar />
+      <Hero />
+      <SobreMi />
+      <Proyectos />
+      <Contacto />
+      <WhatsAppButton />
+      <Footer />
+    </div>
+  );
 }
 
-export default App
